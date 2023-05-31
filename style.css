@@ -1,0 +1,344 @@
+:root {
+    /* definir cores */
+    --clr-accent: linear-gradient(204.47deg, #FF6A3A, #FF527B 100%);
+    --clr-primary-400: hsla(4, 100%, 67%, 0.15);
+    --clr-primary-900: hsl(4, 100%, 67%);
+    --clr-secondary: hsl(234, 29%, 20%);
+    --clr-neutral-gray: hsl(231, 7%, 60%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+
+    /*Font family*/
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-body: var(--ff-primary);
+
+    /*Font weight*/
+    --fw-regular-400: 400;
+    --fw-bold-700: 700;
+
+    /*Font size*/
+    --fs-400: 1rem;
+    --fs-12-700: 0.75rem;
+    --fs-16-700: 1rem;
+    --fs-700: 2.5rem;
+    --fs-700-button: 3.5rem;
+
+    --fs-body: var(--fs-400);
+    --fs-primary-title: var(--fs-700);
+    --fs-form-title: var(--fs-12-700);
+
+    /*spacing*/
+    --pd-null: 0rem;
+    --pd-primary: 1.5rem;
+    --pd-list-item: 0.570625rem;
+    --pd-left-column: 6.0625rem 2.5rem 6.0625rem 4rem;
+    --pd-success-message: 4rem;
+}
+
+
+/*RESET*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+
+html,
+body {
+    height: 100%;
+    background-color: var(--clr-neutral-white);
+    font-family: var(--ff-body);
+    font-size: var(--fs-body);
+}
+
+body {
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
+}
+
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/*RESET*/
+
+
+/*Utility classes*/
+
+.inline {
+    display: inline;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inherit;
+}
+
+.flex {
+    display: flex;
+}
+
+.bullets {
+    background-color: var(--clr-primary-900);
+    color: var(--clr-neutral-white);
+}
+
+.clr_primary {
+    color: var(--clr-primary-900);
+}
+
+.text__color {
+    color: var(--clr-secondary);
+}
+
+.fs__small {
+    font-size: var(--fs-12-700);
+}
+
+.fw__regular {
+    font-weight: var(--fw-regular-400);
+}
+
+.fw__bold {
+    font-weight: var(--fw-bold-700);
+}
+
+.primary__title {
+    font-size: var(--fs-primary-title);
+}
+
+.form__title {
+    font-size: var(--fs-form-title);
+    font-weight: var(--fw-bold-700);
+}
+
+.pd-bottom {
+    padding-bottom: var(--pd-primary);
+}
+
+.pd-bottom-list-item {
+    padding-bottom: var(--pd-list-item);
+
+}
+
+.pd-message {
+    padding-inline: var(--pd-primary);
+}
+
+.fw-list-item {
+    font-weight: var(--fw-regular-400);
+}
+
+.button {
+    border: 0;
+    background-color: var(--clr-secondary);
+    color: var(--clr-neutral-white);
+    border-radius: 0.5rem;
+    height: var(--fs-700-button);
+    width: 100%;
+}
+
+.emailInput {
+    display: inline-block;
+    color: var(--clr-neutral-gray);
+    border: 1px solid var(--clr-neutral-gray);
+    border-radius: 0.5rem;
+    width: 100%;
+    height: var(--fs-700-button);
+    margin-bottom: var(--pd-primary);
+}
+
+/*------------------*/
+
+/*------------------------*/
+
+main {
+    max-width: 58rem;
+    background-color: var(--clr-neutral-white);
+    height: 100%;
+}
+
+.container {
+    min-height: 17.75rem;
+    position: relative;
+    height: 100%;
+}
+
+.icon-item {
+    height: 1.3125rem;
+    width: 1.3125rem;
+    display: inline;
+    margin-right: 1rem;
+}
+
+.containerImage {
+    margin-inline: auto;
+}
+
+.even-columns {
+    flex-direction: column-reverse;
+}
+
+.column-left {
+    padding: var(--pd-primary);
+}
+
+.column-right {
+    padding: var(--pd-null);
+    min-height: 17.75rem;
+}
+
+/*Form*/
+
+.inputTitle p {
+    float: right;
+}
+
+label {
+    margin-bottom: 0.5rem;
+}
+
+.emailInput {
+    padding-left: var(--pd-primary);
+}
+
+.emailInput:focus-visible {
+    border-color: var(--clr-neutral-gray);
+    background-color: var(--clr-neutral-white);
+    color: var(--clr-secondary);
+}
+
+.emailErrorMessage {
+    border-color: var(--clr-primary-900);
+    background-color: var(--clr-primary-400);
+}
+
+.button:active {
+    background-image: linear-gradient(204.47deg, #FF6A3A 0%, #FF527B 100%);
+    box-shadow: 0px 16px 32px rgba(255, 97, 85, 0.5);
+}
+
+/*Sucess message*/
+
+.successMessasge {
+    max-width: 31.5rem;
+    height: 100%;
+}
+
+.successMessasge .flex {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+.successMessasge img {
+    width: 4rem;
+    padding-bottom: 2.5rem;
+}
+
+.sm__column {
+    position: relative;
+}
+
+.button[data-category="hideMessage"] {
+    align-self: flex-end;
+    margin-bottom: var(--pd-primary);
+}
+
+@media (min-width:45em) {
+    :root {
+        --fs-700: 3.5rem;
+    }
+
+    body {
+        background-color: var(--clr-secondary) !important;
+    }
+
+    main {
+        max-height: 40.0625rem;
+        border-radius: 2.25rem;
+    }
+
+    .even-columns {
+        flex-direction: row !important;
+    }
+
+    .containerImage {
+        content: url("./assets/images/illustration-sign-up-desktop.svg");
+        position: relative !important;
+        height: 37.0625rem;
+        max-width: fit-content;
+    }
+
+    .column-left {
+        padding: var(--pd-left-column) !important;
+    }
+
+    .column-right {
+        padding: var(--pd-primary) !important;
+    }
+
+    .pd-message {
+        padding-inline: var(--pd-success-message);
+    }
+
+    .button[data-category="hideMessage"] {
+        align-self: auto;
+        margin-bottom: var(--pd-primary);
+    }
+}
